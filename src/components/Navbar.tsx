@@ -15,10 +15,6 @@ const Navbar: React.FC = () => {
       title: "Contact",
       href: "/contact",
     },
-    {
-      title: "Support",
-      href: "/support",
-    },
   ];
   return (
     <div className="text-white fixed left-0 top-0 bg-[#121316] w-full flex justify-between p-4 z-20">

@@ -8,6 +8,7 @@ import PersonalInformation from "@/components/request/PersonalInformation";
 import UploadDesc from "@/components/request/UploadDesc";
 import Image from "next/image";
 import close from "@/assets/close.svg";
+import Finish from "@/components/request/Finish";
 
 const steps = [
   {
@@ -44,10 +45,17 @@ const RequestWeb = () => {
   const handleReset = () => {
     setActiveStep(0);
   };
-  const tabs = [<PersonalInformation next={handleNext} />];
+  const tabs = [
+    <PersonalInformation next={handleNext} />,
+    <UploadDesc next={handleNext} back={handleBack} />,
+    <Finish next={handleNext} back={handleBack} />,
+  ];
   return (
     <div className="w-full p-20 h-screen overflow-hidden flex items-center justify-center bg-[#121316] text-gray-400">
-      <button className="absolute top-10 right-10 hover:scale-110 transition-all duration-500">
+      <button
+        onClick={() => window.history.back()}
+        className="absolute top-10 right-10 hover:scale-110 transition-all duration-500"
+      >
         <Image src={close} alt="" />
       </button>
       <div className="w-[60vw]">{tabs[activeStep]}</div>
