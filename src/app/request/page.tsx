@@ -65,26 +65,19 @@ const RequestWeb = () => {
             <UploadDesc next={handleNext} />
           </StepContent>
         </Step>
-        {steps.map((step, index) => (
-          <Step key={step.label}>
-            <StepLabel optional={index === 2 ? <p>Last step</p> : null}>
-              {step.label}
-            </StepLabel>
-            <StepContent>
-              <p>{step.description}</p>
-              <div>
-                <div>
-                  <button onClick={handleNext}>
-                    {index === steps.length - 1 ? "Finish" : "Continue"}
-                  </button>
-                  <button disabled={index === 0} onClick={handleBack}>
-                    Back
-                  </button>
-                </div>
-              </div>
-            </StepContent>
-          </Step>
-        ))}
+        <Step>
+          <StepLabel className="text-gray-400" sx={{ color: "white" }}>
+            <p className="text-gray-400">Finish</p>
+          </StepLabel>
+          <StepContent>
+            <div className="">
+              <p>
+                Finished Adding the description, you will be contacted later on
+                your email{" "}
+              </p>
+            </div>
+          </StepContent>
+        </Step>
       </Stepper>
     </div>
   );
