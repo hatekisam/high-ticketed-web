@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const RequestWeb = () => {
@@ -7,9 +8,12 @@ const RequestWeb = () => {
         Digitalize, Simplify, Fasten
       </p>
       <p className="mt-3 mb-10">Ready to bring thoughts into life</p>
-      <button className="bg-blue-500  px-10 py-3 rounded-full my-2 text-lg   hover:scale-110 transition-all duration-500">
+      <Link
+        href="/request"
+        className="bg-blue-500  px-10 py-3 rounded-full my-2 text-lg   hover:scale-110 transition-all duration-500"
+      >
         Request Website
-      </button>
+      </Link>
     </div>
   );
 };
