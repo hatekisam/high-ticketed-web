@@ -5,6 +5,7 @@ import Step from "@mui/material/Step";
 import StepLabel from "@mui/material/StepLabel";
 import StepContent from "@mui/material/StepContent";
 import PersonalInformation from "@/components/request/PersonalInformation";
+import UploadDesc from "@/components/request/UploadDesc";
 
 const steps = [
   {
@@ -53,7 +54,15 @@ const RequestWeb = () => {
             <p className="text-gray-400">Personal Information</p>
           </StepLabel>
           <StepContent>
-            <PersonalInformation />
+            <PersonalInformation next={handleNext} />
+          </StepContent>
+        </Step>
+        <Step>
+          <StepLabel className="text-gray-400" sx={{ color: "white" }}>
+            <p className="text-gray-400">Website Description</p>
+          </StepLabel>
+          <StepContent>
+            <UploadDesc next={handleNext} />
           </StepContent>
         </Step>
         {steps.map((step, index) => (

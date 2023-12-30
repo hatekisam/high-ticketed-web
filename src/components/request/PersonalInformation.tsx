@@ -1,6 +1,6 @@
 import React from "react";
 
-const PersonalInformation = () => {
+const PersonalInformation = ({ next }: { next: () => void }) => {
   return (
     <div className="w-[100%] flex justify-between flex-col items-center gap-[1rem]">
       <div className="w-[100%] flex justify-between flex-col items-center gap-[2rem] sm:gap-[1rem]">
@@ -24,11 +24,13 @@ const PersonalInformation = () => {
           placeholder="Subject"
           className="bg-[#4b89b833] px-[2rem] py-[1rem] w-[100%] rounded-[10px] outline-none"
         />
-        <input
-          type="submit"
-          value="Send Message"
+        <button
+          type="button"
           className="w-full bg-blue-500 py-3 rounded-full text-white cursor-pointer"
-        />
+          onClick={next}
+        >
+          Next
+        </button>
       </div>
     </div>
   );
