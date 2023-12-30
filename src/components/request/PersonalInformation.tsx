@@ -7,21 +7,30 @@ const PersonalInformation = ({ next }: { next: () => void }) => {
         <div className="w-[100%] flex justify-between items-center ss:flex-col gap-[1rem]">
           <input
             type="text"
-            name="fullname"
             className="bg-[#4b89b833] px-[2rem] py-[1rem] w-[100%] rounded-[10px] outline-none"
-            placeholder="Full names"
+            placeholder="First Name"
           />
           <input
             type="text"
-            name="user_email"
             className="bg-[#4b89b833] px-[2rem] py-[1rem] w-[100%] rounded-[10px] outline-none"
+            placeholder="Last Name"
+          />
+        </div>
+        <div className="flex flex-col md:flex-row gap-[1rem] w-full">
+          <input
+            type="text"
+            className="bg-[#4b89b833] px-[2rem] py-[1rem]  rounded-[10px] outline-none w-[70%]"
             placeholder="Email"
+          />
+          <input
+            type="text"
+            className="bg-[#4b89b833] px-[2rem] py-[1rem] w-[30%] rounded-[10px] outline-none"
+            placeholder="Phone"
           />
         </div>
         <input
           type="text"
-          name="subject"
-          placeholder="Subject"
+          placeholder="Address"
           className="bg-[#4b89b833] px-[2rem] py-[1rem] w-[100%] rounded-[10px] outline-none"
         />
         <button
