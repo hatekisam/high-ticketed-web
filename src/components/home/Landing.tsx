@@ -1,8 +1,10 @@
+import Image from "next/image";
 import React from "react";
+import gif from "@/assets/landing.gif";
 
 const Landing = () => {
   return (
-    <div className="px-5 sm:px-8 md:px-10 lg:px-16 py-32">
+    <div className="px-5 sm:px-8 md:px-10 lg:px-16 py-32 flex justify-between">
       <div className="w-[60%]">
         <p className="text-6xl">
           Crafting Your <span className="text-blue-500">Digital Presence</span>{" "}
@@ -18,6 +20,9 @@ const Landing = () => {
         <button className="bg-blue-500 text-black px-10 py-2 rounded-full my-2 text-xl   hover:scale-110 transition-all duration-500">
           Get Started
         </button>
+      </div>
+      <div className="w-[40%]">
+        <Image src={gif} alt="websites" />
       </div>
     </div>
   );
