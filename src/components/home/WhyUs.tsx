@@ -58,7 +58,7 @@ const WhyUs = () => {
         {CARDS_DATA.map((data, index: number) => (
           <div
             key={index}
-            className={`!bg-cover !bg-no-repeat min-w-[256px] rounded-lg h-fit xl:h-[400px] transition-all duration-500 p-8 flex flex-col relative bg-[#191A1D] ${
+            className={` min-w-[256px] rounded-lg h-fit xl:h-[400px] transition-all duration-500 p-8 flex flex-col relative bg-[#191A1D] ${
               isCurrent(index) ? "flex-1 ease-out" : "ease-in"
             }`}
             // style={{
@@ -94,9 +94,6 @@ const WhyUs = () => {
         ))}
       </div>
     </div>
-  );
-  return (
-    <div className="px-16 py-20 pt-32 flex items-center justify-center"></div>
   );
 };
 

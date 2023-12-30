@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
     },
   ];
   return (
-    <div className="text-white fixed left-0 top-0 bg-[#121316] w-full flex justify-between p-4">
+    <div className="text-white fixed left-0 top-0 bg-[#121316] w-full flex justify-between p-4 z-20">
       <p className="text-2xl">HTicketed Web</p>
       <div>
         {routes.map((route: any, index: number) => {
