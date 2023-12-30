@@ -8,7 +8,7 @@ import WhyUs from "@/components/home/WhyUs";
 
 export default function Home() {
   return (
-    <div className="bg-[#121316] pt-20 text-white">
+    <div className="bg-[#121316] pt-20 text-white w-screen overflow-x-hidden">
       <Landing />
       <SliderSection />
       <WhyUs />

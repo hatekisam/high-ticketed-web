@@ -13,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="w-screen overflow-x-hidden">
       <Navbar />
       {children}
       <Footer />

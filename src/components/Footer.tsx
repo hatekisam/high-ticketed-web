@@ -18,8 +18,12 @@ const Footer = () => {
           <p>About</p>
         </div>
       </div>
-      <div className="flex justify-between">
-        
+      <div className="flex justify-between bg-[#191A1D] px-20 py-3 text-gray-400">
+        <p>www.highticketedweb.com</p>
+        <p>
+          Copyright © {new Date().getFullYear()} HTicketed. All Rights Reserved
+        </p>
+        <p>+252343413494</p>
       </div>
     </div>
   );
