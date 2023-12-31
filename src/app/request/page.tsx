@@ -6,7 +6,6 @@ import Image from "next/image";
 import close from "@/assets/close.svg";
 import Finish from "@/components/request/Finish";
 
-
 const RequestWeb = () => {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -22,9 +21,9 @@ const RequestWeb = () => {
     setActiveStep(0);
   };
   const tabs = [
-    <PersonalInformation next={handleNext} />,
-    <UploadDesc next={handleNext} back={handleBack} />,
-    <Finish next={handleNext} back={handleBack} />,
+    <PersonalInformation key={0} next={handleNext} />,
+    <UploadDesc key={1} next={handleNext} back={handleBack} />,
+    <Finish key={2} next={handleNext} back={handleBack} />,
   ];
   return (
     <div className="w-full p-20 h-screen overflow-hidden flex items-center justify-center bg-[#121316] text-gray-400">
