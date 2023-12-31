@@ -25,7 +25,7 @@ const Footer = () => {
             <p className="font-bold">Legal Information</p>
             {routes.map((route: any, index: number) => {
               return (
-                <Link href={route.href} className="block">
+                <Link key={index} href={route.href} className="block">
                   {route.title}
                 </Link>
               );
