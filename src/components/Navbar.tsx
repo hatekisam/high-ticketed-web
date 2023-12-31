@@ -22,7 +22,11 @@ const Navbar: React.FC = () => {
       <div>
         {routes.map((route: any, index: number) => {
           return (
-            <Link href={route.href} className="text-sm font-bold px-5">
+            <Link
+              key={index}
+              href={route.href}
+              className="text-sm font-bold px-5"
+            >
               {route.title}
             </Link>
           );
