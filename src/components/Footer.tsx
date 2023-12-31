@@ -34,9 +34,9 @@ const Footer = () => {
           <div>
             <p className="font-bold">Contacts</p>
             <ul className="list-disc">
-              <li>noid@gmail.com</li>
-              <li>+2502u04234893</li>
-              <li>Kigali,Rwanda</li>
+              <li>hticketedweb@gmail.com</li>
+              <li>1-505-699-3768</li>
+              <li>Albuquerque, New Mexico</li>
             </ul>
           </div>
         </div>
