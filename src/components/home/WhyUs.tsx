@@ -47,8 +47,8 @@ const WhyUs = () => {
           Why Choose <span className="text-blue-500">HTicketed Web</span>
         </p>
         <h3 className="font-mont font-medium text-lg md:text-xl text-center">
-          Opt for [Institution Name] for unique, standout websites. Our
-          commitment to creative customization, innovation, and seamless
+          Opt us for unique, standout websites. <br />
+          Our commitment to creative customization, innovation, and seamless
           collaboration ensures maximum impact in the digital realm.
         </h3>
       </div>
