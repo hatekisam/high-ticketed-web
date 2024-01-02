@@ -1,9 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
+import { api } from "@/utils/api/api";
+import { ClipLoader } from "react-spinners";
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
   const schema = yup.object().shape({
     name: yup.string().required("Please provide your names"),
     email: yup
@@ -14,7 +17,18 @@ const ContactForm = () => {
     message: yup.string().required("Please provide the message"),
   });
   const onSubmit = (data: any) => {
-    console.log(data);
+    setLoading(true);
+    api
+      .post("/contact", data)
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
   const {
     register,
@@ -71,11 +85,17 @@ const ContactForm = () => {
             className="bg-[#4b89b833] w-[100%] resize-none h-[17em] p-[1rem] rounded-[10px] outline-none"
           ></textarea>
           <p className="text-red-500">{errors.message?.message}</p>
-          <input
-            type="submit"
-            value="Send Message"
-            className="w-full bg-blue-500 py-3 rounded-full text-white cursor-pointer"
-          />
+          {loading ? (
+            <div className="w-full bg-blue-500 py-3 rounded-full text-white cursor-pointer flex items-center justify-center">
+              <ClipLoader color="white" size={15} />
+            </div>
+          ) : (
+            <input
+              type="submit"
+              value="Send Message"
+              className="w-full bg-blue-500 py-3 rounded-full text-white cursor-pointer"
+            />
+          )}
         </form>
       </div>
     </div>
