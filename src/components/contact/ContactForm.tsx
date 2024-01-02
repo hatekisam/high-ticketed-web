@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
 import { api } from "@/utils/api/api";
 import { ClipLoader } from "react-spinners";
+import { toast } from "react-toastify";
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const schema = yup.object().shape({
@@ -22,9 +23,29 @@ const ContactForm = () => {
       .post("/contact", data)
       .then((res) => {
         console.log(res);
+        toast.success("Message Sent to the Hticketed Web!", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
       .catch((err) => {
         console.log(err);
+        toast.error("🦄 Message not sent succesfully to HTicketed", {
+          position: "top-right",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       })
       .finally(() => {
         setLoading(false);
