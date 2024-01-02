@@ -1,11 +1,9 @@
-import axios from 'axios';
+import axios from "axios";
 
-// Create a basic Axios instance with a base URL
-const instance = axios.create({
-  baseURL: 'https://api.example.com',
+export const api = axios.create({
+  baseURL: "https://hticketed-backend.onrender.com/api/v1",
   timeout: 5000,
   headers: {
-    'Content-Type': 'application/json',
-    // You can add other headers here
+    "Content-Type": "application/json",
   },
 });
